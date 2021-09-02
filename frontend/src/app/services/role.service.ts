@@ -16,4 +16,12 @@ export class RoleService {
     return this._http.get<any>(this.env + 'role/listRole' );
   }
 
+  deleteRole(role:any){
+    return this._http.put<any>(this.env + 'role/deleteRole', role);
+  }
+
+  registerRole(role: any) {
+    return this._http.post<any>(this.env + 'role/registerRole', role);
+  }
+
 }
